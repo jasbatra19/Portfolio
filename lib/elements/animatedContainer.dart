@@ -26,15 +26,11 @@ class _AnimationContainerState extends State<AnimationContainer>
   }
  
   Widget build(BuildContext context) {
-    //   double elevation = 4.0;
-    // double scale = 0.5;
-    // Offset translate = Offset(0, 0);
+  
     var size = MediaQuery.of(context).size;
     return  Container(
                     padding: EdgeInsets.all(5),
-                    // height: size.height * 0.2,
-                    // width: size.width,
-                    color: Colors.white,
+                    color:Color(0xffFFEFEF),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       crossAxisAlignment: CrossAxisAlignment.center,
@@ -47,21 +43,23 @@ class _AnimationContainerState extends State<AnimationContainer>
                             style: TextStyle(
                                 shadows: [
                                   Shadow(
-                                    blurRadius: 10.0,
-                                    color: Colors.black54,
-                                    offset: Offset(5.0, 5.0),
+                                    blurRadius: 20.0,
+                                    color: Color(0xff525E75),
+                                    offset: Offset(2.0, 2.0),
                                   ),
                                 ],
-                                color: Colors.black87,
+                                color: Color(0xff1B2430),
                                 fontWeight: FontWeight.w500,
                                 fontSize: MediaQuery.of(context).size.width*0.03,
                                 fontFamily: "Courgette"),
                           ),
                         ),
                         Container(
+                          decoration: BoxDecoration(borderRadius: BorderRadius.circular(50),),
                           height: size.height * 0.2,
                           child: Image.asset(
                             "images/code.jpg",
+                            fit: BoxFit.fill,
                           ),
                         )
                       ],
